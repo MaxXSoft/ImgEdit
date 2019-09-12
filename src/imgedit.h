@@ -13,11 +13,16 @@ class ImageEditor {
   ImageEditor(const std::string &image_file) { LoadImageFile(image_file); }
   ~ImageEditor() {}
 
+  // load floppy image from file
   bool LoadImageFile(const std::string &image_file);
+  // create image with specific boot sector
   bool CreateImage(const std::string &image_file,
                    const std::string &boot_sector_file);
+  // print directory information of current image
   bool PrintDirInfo(std::ostream &os);
+  // read & print file from image
   bool ReadFile(std::ostream &os, const std::string &filename);
+  // add a new file to image
   bool AddFile(std::istream &is, const std::string &filename);
 
   bool is_open() const { return fs_.is_open(); }
