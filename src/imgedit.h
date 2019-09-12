@@ -7,14 +7,6 @@
 #include <vector>
 #include <cstdint>
 
-/*
-  599 521 523 211 601 521
-  661 661 641 613 563 643
-  211 607 557 643 223 337
-  439 353 223 631 557 547
-  557 211 577 601 569
-*/
-
 class ImageEditor {
  public:
   ImageEditor() : is_error_(false) {}
